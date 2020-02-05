@@ -76,6 +76,6 @@ def handler(context, event):
 
     tsdbdf = convert_to_df(event_body[1])
 
-    context.user_data.client.write(backend='tsdb', table="tsdb", dfs=tsdbdf, labels=event_body[1]["labels"])
+    context.user_data.client.write(backend='tsdb', table="oded", dfs=tsdbdf, labels=event_body[1]["labels"])
 
     context.logger.debug_with('*** End handling', pid=event.shard_id)
